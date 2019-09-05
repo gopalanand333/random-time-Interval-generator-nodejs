@@ -1,0 +1,27 @@
+{
+  "name": "random-time-interval-generator-nodejs",
+  "version": "1.0.0",
+  "description": "This application will generate data for random interval. Can be used where there's need of interval data",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gopalanand333/random-time-Interval-generator-nodejs.git"
+  },
+  "author": "Gopal Anand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gopalanand333/random-time-Interval-generator-nodejs/issues"
+  },
+  "homepage": "https://github.com/gopalanand333/random-time-Interval-generator-nodejs#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
