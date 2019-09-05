@@ -6,3 +6,6 @@ This application will generate data for random interval. Can be used where there
 - change the data endpoints where you want the data stream to go.
 
 #### You are all set to start the data stream
+
+# postdata.js in scripts directory have caapability to trigger oauth 2.0 token calls and refresh token calls. 
+
