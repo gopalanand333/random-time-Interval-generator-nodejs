@@ -10,6 +10,13 @@ app.use(cors());
 app.get("/",(req,res)=>{
     res.send("the server us jumping");
 });
+const bodyParser = require("body-parser");
+const dotenv = require("dotenv");  // dotenv is used for local enviornment vars
+dotenv.config(); 
+app.use(bodyParser.json());
+app.use(express.urlencoded({
+  extended: true
+}));
 //listening to a port
 app.listen(port, ()=>{
     console.log("App is running at -", port);

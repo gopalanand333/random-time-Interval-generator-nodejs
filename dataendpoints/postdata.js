@@ -1,12 +1,5 @@
-const bodyParser = require("body-parser");
 const querystring = require("querystring");
 const request = require("request");
-const dotenv = require("dotenv");  // dotenv is used for local enviornment vars
-dotenv.config(); 
-app.use(bodyParser.json());
-app.use(express.urlencoded({
-  extended: true
-}));
 /*
     the get token gets the token for first time and store it in _oauthToken
     after that refreshToken is called in every 14 mins to refresh the token.
@@ -19,7 +12,7 @@ app.use(express.urlencoded({
         _oauthToken = token;
         _refresh_token = JSON.parse(_oauthToken).refresh_token;
     }).catch((error)=>{
-        console.log("error"); // if the token fetching failed
+        console.log("error", error); // if the token fetching failed
     });
 }());
 setInterval(getRefreshToken,840000);
@@ -86,9 +79,13 @@ function getRefreshToken(){
  * @param {sting} endpoint  the property of endpoint/url of the endpoint where you want to post data
  */
 function postDataToEndPoint(data,endpoint){
+console.log(data,endpoint)
 
 }
 
+/**
+ * exporting the post data module 
+ */
 module.exports = {
     postDataToEndPoint
 }
