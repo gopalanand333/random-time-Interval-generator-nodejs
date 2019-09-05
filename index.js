@@ -10,9 +10,13 @@ app.use(cors());
 app.get("/",(req,res)=>{
     res.send("the server us jumping");
 });
-
-
 //listening to a port
 app.listen(port, ()=>{
     console.log("App is running at -", port);
 });
+var dataGenerator = require("./scripts/dataGenerator");
+(function(){
+    setInterval(function(){
+        dataGenerator.firstDataSet();
+    },3000);
+})();
